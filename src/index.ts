@@ -16,7 +16,7 @@ module.exports = (singleMode = true): IBuzzer | IBuzzer[] => {
   const buzzers: IBuzzer[] = [];
   const devices = nodeHid.devices();
   const buzzDongles = devices.filter(
-    (d) => d.vendorId === hw.VENDOR_ID && d.productId === hw.PRODUCT_ID
+    (d: nodeHid.Device) => d.product?.match(/Buzz/)
   );
   buzzDongles.forEach((bd) => {
     if (typeof bd?.path === "string") {
