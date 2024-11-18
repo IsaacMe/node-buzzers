@@ -21,7 +21,7 @@ const Device = (connector: ConnectDeviceType, mapper: DataMapper): IDevice => {
           states.map(function (state) {
             return state ? 0xff : 0x00;
           })
-        )
+        ).concat([0x00, 0x00])
       );
     },
   };
