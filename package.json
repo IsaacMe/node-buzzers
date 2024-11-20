@@ -29,10 +29,11 @@
     "types"
   ],
   "scripts": {
+    "prepare": "tsc",
     "start": "tsc",
     "lint": "eslint .",
     "predev": "npm run start",
-    "dev": "node examples/simple",
+    "dev": "node examples/multi-blink",
     "test": "ava test",
     "test:coverage": "nyc ava test",
     "test:watch": "ava test --watch"
