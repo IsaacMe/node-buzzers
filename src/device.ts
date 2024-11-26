@@ -24,6 +24,9 @@ const Device = (connector: ConnectDeviceType, mapper: DataMapper): IDevice => {
         ).concat([0x00, 0x00])
       );
     },
+    close() {
+      hidDevice.close();
+    }
   };
 };
 

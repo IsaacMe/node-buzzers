@@ -44,6 +44,10 @@ export interface IBuzzer {
    * @param led4 {boolean} On/Off status of LED for controller #4
    */
   setLeds(led1: boolean, led2: boolean, led3: boolean, led4: boolean): void;
+  /**
+   * Close the connection with the buzzer
+   */
+  close(): void;
 }
 
 /** The available types of events for the Buzzers' USB Dongle */
@@ -88,6 +92,10 @@ export interface IDevice {
    * @param ledStates
    */
   setLeds(ledStates: IDeviceLeds): void;
+  /**
+   * Close the connection with the buzzer
+   */
+  close(): void;
 }
 
 /** The change handlers */

@@ -118,6 +118,9 @@ export default function Buzzer(device: IDevice): IBuzzer {
     onRelease(cb) {
       releaseListeners.add(cb);
     },
+    close() {
+      device.close();
+    },
     removeEventListener(type, callback) {
       switch (type) {
         case "change":
